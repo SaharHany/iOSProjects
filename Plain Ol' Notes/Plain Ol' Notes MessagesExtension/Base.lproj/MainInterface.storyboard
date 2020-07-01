@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,29 +10,144 @@
         <!--Messages View Controller-->
         <scene sceneID="7MM-of-jgj">
             <objects>
-                <viewController id="ObA-dk-sSI" customClass="MessagesViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ObA-dk-sSI" customClass="MessagesViewController" customModule="Plain_Ol__Notes_MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1e-fi-ked">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" xcode11CocoaTouchSystemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plain Ol' Notes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tpm-zX-IV3">
+                                <rect key="frame" x="109.5" y="111" width="101" height="18.5"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <color key="textColor" red="0.5" green="0.1124543589" blue="0.35434881150000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="d1e-fi-ked" secondAttribute="centerY" id="H0s-hz-dDP"/>
-                            <constraint firstAttribute="centerX" secondItem="d1e-fi-ked" secondAttribute="centerX" id="wFy-hW-Bib"/>
+                            <constraint firstItem="Tpm-zX-IV3" firstAttribute="centerY" secondItem="zMn-AG-sqS" secondAttribute="centerY" id="jeG-Lq-Ki3"/>
+                            <constraint firstItem="Tpm-zX-IV3" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="mLg-x4-x61"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LDy-ih-0nr"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="528"/>
+                    <size key="freeformSize" width="320" height="240"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="95"/>
+        </scene>
+        <!--Expanded View Controller-->
+        <scene sceneID="eJR-W5-9bM">
+            <objects>
+                <viewController storyboardIdentifier="expanded" id="m3h-Ed-p61" customClass="ExpandedViewController" customModule="Plain_Ol__Notes_MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wPt-Tu-f80">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ouL-Sr-hYU">
+                                <rect key="frame" x="246" y="16" width="66" height="34"/>
+                                <color key="backgroundColor" red="0.5" green="0.1124543589" blue="0.35434881150000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="b3X-RM-3U3"/>
+                                    <constraint firstAttribute="height" constant="34" id="fJq-9U-E1X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendBtnAction:" destination="m3h-Ed-p61" eventType="touchUpInside" id="r2D-3j-RZq"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Note Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y13-fj-sDw">
+                                <rect key="frame" x="16" y="16" width="216" height="34"/>
+                                <color key="textColor" red="0.5" green="0.1124543589" blue="0.35434881150000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Note" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hFD-kQ-Mzn">
+                                <rect key="frame" x="16" y="58" width="288" height="454"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ouL-Sr-hYU" firstAttribute="top" secondItem="wPt-Tu-f80" secondAttribute="top" constant="16" id="4Rm-1k-5nN"/>
+                            <constraint firstItem="hFD-kQ-Mzn" firstAttribute="leading" secondItem="Fxi-wv-18v" secondAttribute="leading" constant="16" id="VFW-j0-ryT"/>
+                            <constraint firstItem="Fxi-wv-18v" firstAttribute="trailing" secondItem="hFD-kQ-Mzn" secondAttribute="trailing" constant="16" id="Xq1-tP-BbT"/>
+                            <constraint firstItem="hFD-kQ-Mzn" firstAttribute="top" secondItem="ouL-Sr-hYU" secondAttribute="bottom" constant="8" id="bUc-09-RjF"/>
+                            <constraint firstItem="Y13-fj-sDw" firstAttribute="centerY" secondItem="ouL-Sr-hYU" secondAttribute="centerY" id="d44-xs-VfY"/>
+                            <constraint firstAttribute="trailing" secondItem="ouL-Sr-hYU" secondAttribute="trailing" constant="8" id="f8m-6P-kaf"/>
+                            <constraint firstItem="hFD-kQ-Mzn" firstAttribute="centerX" secondItem="wPt-Tu-f80" secondAttribute="centerX" id="hpx-EH-xE8"/>
+                            <constraint firstItem="Y13-fj-sDw" firstAttribute="top" secondItem="wPt-Tu-f80" secondAttribute="top" constant="16" id="lMq-L6-lRT"/>
+                            <constraint firstItem="Y13-fj-sDw" firstAttribute="leading" secondItem="Fxi-wv-18v" secondAttribute="leading" constant="16" id="nHE-OM-rfG"/>
+                            <constraint firstItem="ouL-Sr-hYU" firstAttribute="leading" secondItem="Y13-fj-sDw" secondAttribute="trailing" constant="14" id="v93-kt-taR"/>
+                            <constraint firstItem="Fxi-wv-18v" firstAttribute="bottom" secondItem="hFD-kQ-Mzn" secondAttribute="bottom" constant="16" id="xWr-Q2-tkm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Fxi-wv-18v"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="528"/>
+                    <connections>
+                        <outlet property="noteBody_TV" destination="hFD-kQ-Mzn" id="zf0-yB-Qhl"/>
+                        <outlet property="noteTitle_TF" destination="Y13-fj-sDw" id="Qp5-6R-VrT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Je4-3T-qOH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1321.7391304347827" y="120.53571428571428"/>
+        </scene>
+        <!--Compact View Controller-->
+        <scene sceneID="Itr-ci-MxJ">
+            <objects>
+                <viewController storyboardIdentifier="compact" id="3kk-Dq-V1j" customClass="CompactViewController" customModule="Plain_Ol__Notes_MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IWA-Vc-Sdm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plain Ol' Notes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n1y-In-zWh">
+                                <rect key="frame" x="109.5" y="67" width="101" height="18.5"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <color key="textColor" red="0.5" green="0.1124543589" blue="0.35434881150000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATu-dS-dDK">
+                                <rect key="frame" x="109.5" y="104.5" width="101" height="31"/>
+                                <color key="backgroundColor" red="0.5" green="0.11245435887808217" blue="0.35434881148356162" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="New Note">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addNewBtnAction:" destination="3kk-Dq-V1j" eventType="touchUpInside" id="Uqx-EG-zuB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="n1y-In-zWh" firstAttribute="top" secondItem="uBe-iF-0AP" secondAttribute="top" constant="23" id="5ae-YU-7FY"/>
+                            <constraint firstItem="ATu-dS-dDK" firstAttribute="centerX" secondItem="uBe-iF-0AP" secondAttribute="centerX" id="ASV-e8-duH"/>
+                            <constraint firstItem="n1y-In-zWh" firstAttribute="centerX" secondItem="uBe-iF-0AP" secondAttribute="centerX" id="MYC-LC-cqr"/>
+                            <constraint firstItem="ATu-dS-dDK" firstAttribute="trailing" secondItem="n1y-In-zWh" secondAttribute="trailing" id="VaA-Jy-O20"/>
+                            <constraint firstItem="ATu-dS-dDK" firstAttribute="centerY" secondItem="uBe-iF-0AP" secondAttribute="centerY" constant="-22" id="dz2-mE-M8V"/>
+                            <constraint firstItem="ATu-dS-dDK" firstAttribute="leading" secondItem="n1y-In-zWh" secondAttribute="leading" id="gkk-Yv-I4b"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uBe-iF-0AP"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="240"/>
+                    <connections>
+                        <outlet property="titleLabel" destination="n1y-In-zWh" id="ldN-AE-HC1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o8O-3s-rMO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="730.43478260869574" y="93.75"/>
         </scene>
     </scenes>
 </document>

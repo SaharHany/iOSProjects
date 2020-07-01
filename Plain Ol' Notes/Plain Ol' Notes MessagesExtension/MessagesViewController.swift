@@ -9,7 +9,12 @@
 import UIKit
 import Messages
 
-class MessagesViewController: MSMessagesAppViewController {
+class MessagesViewController: MSMessagesAppViewController , CompactDelegate , ExpandedDelegate{
+   
+    let compactID  : String = "compact"
+    let expandedID : String = "expanded"
+    let titleKey   : String = "title"
+    let noteKey    : String = "note"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +28,10 @@ class MessagesViewController: MSMessagesAppViewController {
         // This will happen when the extension is about to present UI.
         
         // Use this method to configure the extension and restore previously stored state.
+    }
+    
+    override func didBecomeActive(with conversation: MSConversation) {
+        presentVC(presentationStyle: self.presentationStyle)
     }
     
     override func didResignActive(with conversation: MSConversation) {
@@ -58,10 +67,54 @@ class MessagesViewController: MSMessagesAppViewController {
         // Use this method to prepare for the change in presentation style.
     }
     
+    func presentVC(presentationStyle: MSMessagesAppPresentationStyle){
+        let identifier = (presentationStyle == .compact) ? compactID : expandedID
+        let controller = storyboard!.instantiateViewController(identifier: identifier)
+        
+        if let compact = controller as? CompactViewController {
+            compact.compactDelegate = self
+        }else if let expanded = controller as? ExpandedViewController {
+            expanded.expandedDelegate = self
+        }
+        
+        for child in children{
+            child.willMove(toParent: nil)
+            child.view.removeFromSuperview()
+            child.removeFromParent()
+        }
+        
+        addChild(controller)
+        controller.view.frame = view.bounds
+        controller.view.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(controller.view)
+        
+        controller.view.leftAnchor.constraint(equalTo: view.leftAnchor).isActive     = true
+        controller.view.rightAnchor.constraint(equalTo: view.rightAnchor).isActive   = true
+        controller.view.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        controller.view.topAnchor.constraint(equalTo: view.topAnchor).isActive       = true
+        controller.didMove(toParent: self)
+    }
+    
     override func didTransition(to presentationStyle: MSMessagesAppPresentationStyle) {
         // Called after the extension transitions to a new presentation style.
     
         // Use this method to finalize any behaviors associated with the change in presentation style.
+        presentVC(presentationStyle: presentationStyle)
     }
 
+    func newNote() {
+        print("New Note")
+    }
+       
+    func sendMessage(title: String, note: String) {
+        print("Send Message")
+    }
+    
+    func getMessageURL(title: String, note: String) -> URL{
+        var components = URLComponents()
+        let qTitle     = URLQueryItem.init(name: titleKey, value: title)
+        let qNote      = URLQueryItem.init(name: noteKey , value: note)
+        components.queryItems = [qTitle,qNote]
+        return components.url!
+    }
 }

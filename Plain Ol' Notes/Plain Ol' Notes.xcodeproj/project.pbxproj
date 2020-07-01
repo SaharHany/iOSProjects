@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61B807C424A7D1E7003ECB3D /* CompactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B807C324A7D1E7003ECB3D /* CompactViewController.swift */; };
+		61B807C624A7D1FB003ECB3D /* ExpandedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B807C524A7D1FB003ECB3D /* ExpandedViewController.swift */; };
 		61F3C51D24A7AE9B00CB485E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61F3C51C24A7AE9B00CB485E /* Assets.xcassets */; };
 		61F3C52424A7AE9B00CB485E /* Plain Ol' Notes MessagesExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 61F3C52324A7AE9B00CB485E /* Plain Ol' Notes MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		61F3C52924A7AE9B00CB485E /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61F3C52824A7AE9B00CB485E /* Messages.framework */; };
@@ -40,6 +42,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		61B807C324A7D1E7003ECB3D /* CompactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactViewController.swift; sourceTree = "<group>"; };
+		61B807C524A7D1FB003ECB3D /* ExpandedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedViewController.swift; sourceTree = "<group>"; };
 		61F3C51924A7AE9900CB485E /* Plain Ol' Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plain Ol' Notes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61F3C51C24A7AE9B00CB485E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61F3C51E24A7AE9B00CB485E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 				61F3C52D24A7AE9B00CB485E /* MainInterface.storyboard */,
 				61F3C53024A7AE9B00CB485E /* Assets.xcassets */,
 				61F3C53224A7AE9B00CB485E /* Info.plist */,
+				61B807C324A7D1E7003ECB3D /* CompactViewController.swift */,
+				61B807C524A7D1FB003ECB3D /* ExpandedViewController.swift */,
 			);
 			path = "Plain Ol' Notes MessagesExtension";
 			sourceTree = "<group>";
@@ -209,6 +215,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61B807C624A7D1FB003ECB3D /* ExpandedViewController.swift in Sources */,
+				61B807C424A7D1E7003ECB3D /* CompactViewController.swift in Sources */,
 				61F3C52C24A7AE9B00CB485E /* MessagesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
