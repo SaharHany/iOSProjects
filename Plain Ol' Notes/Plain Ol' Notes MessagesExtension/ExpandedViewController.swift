@@ -12,7 +12,7 @@ protocol ExpandedDelegate {
     func sendMessage(title:String , note:String)
 }
 
-class ExpandedViewController: UIViewController {
+class ExpandedViewController: UIViewController,UITextViewDelegate {
 
     var expandedDelegate: ExpandedDelegate?
     
@@ -21,7 +21,6 @@ class ExpandedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     
@@ -39,5 +38,9 @@ class ExpandedViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        textView.text = ""
+    }
 
 }

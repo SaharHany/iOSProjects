@@ -107,7 +107,22 @@ class MessagesViewController: MSMessagesAppViewController , CompactDelegate , Ex
     }
        
     func sendMessage(title: String, note: String) {
-        print("Send Message")
+        let session   = MSSession()
+        let message   = MSMessage(session: session)
+        let msgLayout = MSMessageTemplateLayout()
+        msgLayout.caption = note
+        msgLayout.subcaption = title
+        message.layout = msgLayout
+        message.url    = getMessageURL(title: title, note: note)
+        self.activeConversation?.send(message, completionHandler: { (e:Error?) in
+            if e != nil{
+                print("error in sending message : " + e.debugDescription)
+            }else{
+                print("Sent Successfully")
+            }
+        })
+        
+        self.dismiss()
     }
     
     func getMessageURL(title: String, note: String) -> URL{
