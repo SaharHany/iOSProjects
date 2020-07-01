@@ -45,7 +45,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ouL-Sr-hYU">
-                                <rect key="frame" x="246" y="16" width="66" height="34"/>
+                                <rect key="frame" x="172" y="16" width="66" height="34"/>
                                 <color key="backgroundColor" red="0.5" green="0.1124543589" blue="0.35434881150000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="66" id="b3X-RM-3U3"/>
@@ -61,7 +61,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Note Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y13-fj-sDw">
-                                <rect key="frame" x="16" y="16" width="216" height="34"/>
+                                <rect key="frame" x="16" y="16" width="142" height="34"/>
                                 <color key="textColor" red="0.5" green="0.1124543589" blue="0.35434881150000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -76,6 +76,22 @@
                                     <outlet property="delegate" destination="m3h-Ed-p61" id="diu-HC-wJg"/>
                                 </connections>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Es0-XV-B0W" userLabel="Save">
+                                <rect key="frame" x="246" y="16" width="66" height="34"/>
+                                <color key="backgroundColor" red="0.5" green="0.1124543589" blue="0.35434881150000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="Erl-lJ-fwo"/>
+                                    <constraint firstAttribute="height" constant="34" id="xOx-lh-F6X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveBtnAction:" destination="m3h-Ed-p61" eventType="touchUpInside" id="oc4-Om-184"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -83,11 +99,14 @@
                             <constraint firstItem="hFD-kQ-Mzn" firstAttribute="leading" secondItem="Fxi-wv-18v" secondAttribute="leading" constant="16" id="VFW-j0-ryT"/>
                             <constraint firstItem="Fxi-wv-18v" firstAttribute="trailing" secondItem="hFD-kQ-Mzn" secondAttribute="trailing" constant="16" id="Xq1-tP-BbT"/>
                             <constraint firstItem="hFD-kQ-Mzn" firstAttribute="top" secondItem="ouL-Sr-hYU" secondAttribute="bottom" constant="8" id="bUc-09-RjF"/>
+                            <constraint firstItem="Es0-XV-B0W" firstAttribute="leading" secondItem="ouL-Sr-hYU" secondAttribute="trailing" constant="8" id="cAu-Ov-Fhh"/>
                             <constraint firstItem="Y13-fj-sDw" firstAttribute="centerY" secondItem="ouL-Sr-hYU" secondAttribute="centerY" id="d44-xs-VfY"/>
-                            <constraint firstAttribute="trailing" secondItem="ouL-Sr-hYU" secondAttribute="trailing" constant="8" id="f8m-6P-kaf"/>
                             <constraint firstItem="hFD-kQ-Mzn" firstAttribute="centerX" secondItem="wPt-Tu-f80" secondAttribute="centerX" id="hpx-EH-xE8"/>
+                            <constraint firstItem="Es0-XV-B0W" firstAttribute="top" secondItem="ouL-Sr-hYU" secondAttribute="top" id="kT1-yG-6zs"/>
                             <constraint firstItem="Y13-fj-sDw" firstAttribute="top" secondItem="wPt-Tu-f80" secondAttribute="top" constant="16" id="lMq-L6-lRT"/>
+                            <constraint firstItem="Es0-XV-B0W" firstAttribute="bottom" secondItem="ouL-Sr-hYU" secondAttribute="bottom" id="m1G-yD-eEy"/>
                             <constraint firstItem="Y13-fj-sDw" firstAttribute="leading" secondItem="Fxi-wv-18v" secondAttribute="leading" constant="16" id="nHE-OM-rfG"/>
+                            <constraint firstItem="Fxi-wv-18v" firstAttribute="trailing" secondItem="Es0-XV-B0W" secondAttribute="trailing" constant="8" id="o81-XW-JbH"/>
                             <constraint firstItem="ouL-Sr-hYU" firstAttribute="leading" secondItem="Y13-fj-sDw" secondAttribute="trailing" constant="14" id="v93-kt-taR"/>
                             <constraint firstItem="Fxi-wv-18v" firstAttribute="bottom" secondItem="hFD-kQ-Mzn" secondAttribute="bottom" constant="16" id="xWr-Q2-tkm"/>
                         </constraints>

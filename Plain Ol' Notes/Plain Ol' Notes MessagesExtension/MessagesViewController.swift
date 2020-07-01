@@ -11,10 +11,11 @@ import Messages
 
 class MessagesViewController: MSMessagesAppViewController , CompactDelegate , ExpandedDelegate{
    
-    let compactID  : String = "compact"
-    let expandedID : String = "expanded"
-    let titleKey   : String = "title"
-    let noteKey    : String = "note"
+    let compactID       : String = "compact"
+    let expandedID      : String = "expanded"
+    let titleKey        : String = "title"
+    let noteKey         : String = "note"
+    var shouldClear : Bool   = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,12 +72,6 @@ class MessagesViewController: MSMessagesAppViewController , CompactDelegate , Ex
         let identifier = (presentationStyle == .compact) ? compactID : expandedID
         let controller = storyboard!.instantiateViewController(identifier: identifier)
         
-        if let compact = controller as? CompactViewController {
-            compact.compactDelegate = self
-        }else if let expanded = controller as? ExpandedViewController {
-            expanded.expandedDelegate = self
-        }
-        
         for child in children{
             child.willMove(toParent: nil)
             child.view.removeFromSuperview()
@@ -93,6 +88,20 @@ class MessagesViewController: MSMessagesAppViewController , CompactDelegate , Ex
         controller.view.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         controller.view.topAnchor.constraint(equalTo: view.topAnchor).isActive       = true
         controller.didMove(toParent: self)
+        
+        if let compact = controller as? CompactViewController {
+            compact.compactDelegate = self
+        }else if let expanded = controller as? ExpandedViewController {
+            expanded.expandedDelegate = self
+            
+            //case when a new note will be added
+            if shouldClear {
+                expanded.clearText()
+                shouldClear = false
+            }else if let url = self.activeConversation?.selectedMessage?.url{ // case when a message is selected
+                expanded.didOpen(from: url)
+            }
+        }
     }
     
     override func didTransition(to presentationStyle: MSMessagesAppPresentationStyle) {
@@ -103,15 +112,20 @@ class MessagesViewController: MSMessagesAppViewController , CompactDelegate , Ex
     }
 
     func newNote() {
-        print("New Note")
+        shouldClear = true
+        self.requestPresentationStyle(.expanded)
     }
        
     func sendMessage(title: String, note: String) {
-        let session   = MSSession()
+        let session   = self.activeConversation?.selectedMessage?.session ?? MSSession()
         let message   = MSMessage(session: session)
         let msgLayout = MSMessageTemplateLayout()
         msgLayout.caption = note
         msgLayout.subcaption = title
+        
+        let user:String = self.activeConversation?.localParticipantIdentifier.uuidString ?? "Unknown"
+        
+        msgLayout.trailingSubcaption = "Edited by $\(user)"
         message.layout = msgLayout
         message.url    = getMessageURL(title: title, note: note)
         self.activeConversation?.send(message, completionHandler: { (e:Error?) in
@@ -125,11 +139,24 @@ class MessagesViewController: MSMessagesAppViewController , CompactDelegate , Ex
         self.dismiss()
     }
     
+    func saveMessage(title:String , note:String){
+        /*let url = getMessageURL(title: title, note: note)
+        self.extensionContext?.open(url, completionHandler: { (success:Bool) in
+            if success {
+                print("open url successfully")
+            }else{
+                print("failed to open url successfully")
+            }
+        })*/
+    }
+
     func getMessageURL(title: String, note: String) -> URL{
         var components = URLComponents()
         let qTitle     = URLQueryItem.init(name: titleKey, value: title)
         let qNote      = URLQueryItem.init(name: noteKey , value: note)
         components.queryItems = [qTitle,qNote]
+        /*components.scheme = "plainolnotes"
+        components.host   = "openApp"*/
         return components.url!
     }
 }

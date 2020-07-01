@@ -10,11 +10,15 @@ import UIKit
 
 protocol ExpandedDelegate {
     func sendMessage(title:String , note:String)
+    func saveMessage(title:String , note:String)
+
 }
 
 class ExpandedViewController: UIViewController,UITextViewDelegate {
 
     var expandedDelegate: ExpandedDelegate?
+    let titleKey   : String = "title"
+    let noteKey    : String = "note"
     
     @IBOutlet weak var noteTitle_TF: UITextField!
     @IBOutlet weak var noteBody_TV: UITextView!
@@ -29,6 +33,10 @@ class ExpandedViewController: UIViewController,UITextViewDelegate {
         expandedDelegate?.sendMessage(title: noteTitle_TF.text!, note: noteBody_TV.text!)
     }
     
+    
+    @IBAction func saveBtnAction(_ sender: UIButton) {
+        expandedDelegate?.saveMessage(title: noteTitle_TF.text!, note: noteBody_TV.text!)
+    }
     /*
     // MARK: - Navigation
 
@@ -43,4 +51,19 @@ class ExpandedViewController: UIViewController,UITextViewDelegate {
         textView.text = ""
     }
 
+    func didOpen(from url:URL){
+        let component = URLComponents(url: url, resolvingAgainstBaseURL: false)
+        for queryItem in (component?.queryItems!)! {
+            if queryItem.name == titleKey {
+                noteTitle_TF.text = queryItem.value
+            }else if queryItem.name == noteKey {
+                noteBody_TV.text  = queryItem.value
+            }
+        }
+    }
+    
+    func clearText(){
+        noteTitle_TF.text = ""
+        noteBody_TV.text  = "Note"
+    }
 }
