@@ -1,9 +1,38 @@
 {
+  "stickers" : [
+    {
+      "filename" : "Flag Animation.stickersequence"
+    },
+    {
+      "filename" : "sticker1.sticker"
+    },
+    {
+      "filename" : "sticker2.sticker"
+    },
+    {
+      "filename" : "sticker3.sticker"
+    },
+    {
+      "filename" : "sticker5.sticker"
+    },
+    {
+      "filename" : "sticker6.sticker"
+    },
+    {
+      "filename" : "sticker7.sticker"
+    },
+    {
+      "filename" : "sticker8.sticker"
+    },
+    {
+      "filename" : "sticker9.sticker"
+    }
+  ],
   "info" : {
     "version" : 1,
     "author" : "xcode"
   },
   "properties" : {
-    "grid-size" : "regular"
+    "grid-size" : "small"
   }
 }
