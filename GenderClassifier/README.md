@@ -1,0 +1,3 @@
+This App is Gender Classifier App based on Machine Learning Model that can classify the gender of a person in an image.
+I've made this model using Create ML developer tool in XCode.
+It's an image Classifier machine learning model that has been trained to recognize images. When you give it an image, it responds with a label for that image.
