@@ -72,8 +72,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         inputImageView.isHidden = false
 
         updateClassifications(for: image)
-        
-//       shouldShowAnswer()
     }
     
     func convertFromUIImagePickerControllerInfoKeyDictionary(_ input: [UIImagePickerController.InfoKey: Any]) -> [String: Any] {
@@ -134,8 +132,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                    return String(format: "  (%.2f) %@", classification.confidence, classification.identifier)
                 }
                 self.shouldShowAnswer(gender: self.getMaxConfidence(classificationsList: classifications))
-//                self.answerLabel.text = "Classification:\n" + descriptions.joined(separator: "\n")
-               
             }
         }
     }
@@ -143,7 +139,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     /// - Tag: PerformRequests
     func updateClassifications(for image: UIImage) {
         
-//        let orientation = CGImagePropertyOrientation(image.imageOrientation)
         guard let ciImage = CIImage(image: image) else { fatalError("Unable to create \(CIImage.self) from \(image).") }
 
         DispatchQueue.global(qos: .userInitiated).async {
