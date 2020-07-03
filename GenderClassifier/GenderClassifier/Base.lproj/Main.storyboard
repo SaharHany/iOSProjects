@@ -14,13 +14,94 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hW-t8-qlM" userLabel="importBtn">
+                                <rect key="frame" x="67" y="599" width="56" height="42.5"/>
+                                <state key="normal" backgroundImage="folder" catalog="system"/>
+                                <connections>
+                                    <action selector="importImageBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j1I-qY-J4C"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43E-1H-FeE" userLabel="captureBtn">
+                                <rect key="frame" x="251" y="598.5" width="56" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="NbB-xZ-Ya6"/>
+                                    <constraint firstAttribute="height" constant="45" id="VLa-NG-mqo"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="camera" catalog="system"/>
+                                <connections>
+                                    <action selector="takeImageBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y0E-gQ-33K"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guess my Gender!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vjh-WT-Wcl">
+                                <rect key="frame" x="16" y="16" width="343" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="BZT-kk-IXg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
+                                <color key="textColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="o5k-dY-eVs">
+                                <rect key="frame" x="16" y="105" width="343" height="32"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <segments>
+                                    <segment title="Man"/>
+                                    <segment title="Woman"/>
+                                </segments>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="selectedSegmentTintColor" red="0.5" green="0.1124543589" blue="0.35434881150000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I think you're ..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Wxa-7B-qi7">
+                                <rect key="frame" x="16" y="67" width="343" height="26.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="17O-zi-6pI">
+                                <rect key="frame" x="16" y="184" width="343" height="371"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="17O-zi-6pI" secondAttribute="trailing" constant="16" id="0G9-K3-pDE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vjh-WT-Wcl" secondAttribute="trailing" constant="16" id="0zx-Wa-mhc"/>
+                            <constraint firstItem="43E-1H-FeE" firstAttribute="top" secondItem="7hW-t8-qlM" secondAttribute="top" id="6CO-te-e5c"/>
+                            <constraint firstItem="o5k-dY-eVs" firstAttribute="leading" secondItem="vjh-WT-Wcl" secondAttribute="leading" id="8t6-yM-2U1"/>
+                            <constraint firstItem="Wxa-7B-qi7" firstAttribute="top" secondItem="vjh-WT-Wcl" secondAttribute="bottom" constant="17" id="9MC-KO-bYT"/>
+                            <constraint firstItem="vjh-WT-Wcl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="9ME-GI-exi"/>
+                            <constraint firstItem="o5k-dY-eVs" firstAttribute="top" secondItem="Wxa-7B-qi7" secondAttribute="bottom" constant="11.5" id="BiU-nR-e6H"/>
+                            <constraint firstItem="Wxa-7B-qi7" firstAttribute="leading" secondItem="vjh-WT-Wcl" secondAttribute="leading" id="CUK-jr-zKN"/>
+                            <constraint firstItem="7hW-t8-qlM" firstAttribute="width" secondItem="43E-1H-FeE" secondAttribute="width" id="Dv0-ey-9tb"/>
+                            <constraint firstItem="Wxa-7B-qi7" firstAttribute="trailing" secondItem="vjh-WT-Wcl" secondAttribute="trailing" id="G5L-c6-Eja"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="43E-1H-FeE" secondAttribute="trailing" constant="68" id="OCZ-WQ-BVp"/>
+                            <constraint firstItem="vjh-WT-Wcl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="X8Z-GC-LrU"/>
+                            <constraint firstItem="43E-1H-FeE" firstAttribute="leading" relation="lessThanOrEqual" secondItem="7hW-t8-qlM" secondAttribute="trailing" constant="128" id="YXU-YO-U7c"/>
+                            <constraint firstItem="7hW-t8-qlM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="bja-h8-rW6"/>
+                            <constraint firstItem="17O-zi-6pI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="36" id="h7a-SU-9O9"/>
+                            <constraint firstAttribute="bottom" secondItem="7hW-t8-qlM" secondAttribute="bottom" constant="24" id="lwh-lw-U2l"/>
+                            <constraint firstItem="17O-zi-6pI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="n3a-aY-bN3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="43E-1H-FeE" secondAttribute="bottom" constant="24" id="ncv-pe-ObC"/>
+                            <constraint firstItem="7hW-t8-qlM" firstAttribute="height" secondItem="43E-1H-FeE" secondAttribute="height" id="qPI-G6-rsB"/>
+                            <constraint firstItem="o5k-dY-eVs" firstAttribute="trailing" secondItem="vjh-WT-Wcl" secondAttribute="trailing" id="vAD-5A-3UJ"/>
+                            <constraint firstItem="7hW-t8-qlM" firstAttribute="top" secondItem="17O-zi-6pI" secondAttribute="bottom" constant="43" id="yzz-gD-Xfr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="Wxa-7B-qi7" id="XtV-1w-C7T"/>
+                        <outlet property="genderSegmentControl" destination="o5k-dY-eVs" id="tg1-ko-My9"/>
+                        <outlet property="inputImageView" destination="17O-zi-6pI" id="mzh-Cq-Fcn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="115"/>
+            <point key="canvasLocation" x="138.40000000000001" y="114.69265367316342"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera" catalog="system" width="64" height="48"/>
+        <image name="folder" catalog="system" width="64" height="46"/>
+    </resources>
 </document>
