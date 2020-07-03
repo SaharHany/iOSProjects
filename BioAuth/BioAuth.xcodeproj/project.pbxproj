@@ -1,0 +1,386 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		613F720524AFCBD600720668 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613F720424AFCBD600720668 /* AppDelegate.swift */; };
+		613F720724AFCBD600720668 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613F720624AFCBD600720668 /* SceneDelegate.swift */; };
+		613F720924AFCBD600720668 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613F720824AFCBD600720668 /* ViewController.swift */; };
+		613F720C24AFCBD600720668 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 613F720A24AFCBD600720668 /* Main.storyboard */; };
+		613F720F24AFCBD600720668 /* BioAuth.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 613F720D24AFCBD600720668 /* BioAuth.xcdatamodeld */; };
+		613F721124AFCBD700720668 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 613F721024AFCBD700720668 /* Assets.xcassets */; };
+		613F721424AFCBD700720668 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 613F721224AFCBD700720668 /* LaunchScreen.storyboard */; };
+		613F721E24AFCC8400720668 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 613F721C24AFCC6300720668 /* LocalAuthentication.framework */; };
+		613F721F24AFCC8400720668 /* LocalAuthentication.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 613F721C24AFCC6300720668 /* LocalAuthentication.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		613F722024AFCC8400720668 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				613F721F24AFCC8400720668 /* LocalAuthentication.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		613F720124AFCBD600720668 /* BioAuth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BioAuth.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		613F720424AFCBD600720668 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		613F720624AFCBD600720668 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		613F720824AFCBD600720668 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		613F720B24AFCBD600720668 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		613F720E24AFCBD600720668 /* BioAuth.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BioAuth.xcdatamodel; sourceTree = "<group>"; };
+		613F721024AFCBD700720668 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		613F721324AFCBD700720668 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		613F721524AFCBD700720668 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		613F721C24AFCC6300720668 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		613F71FE24AFCBD600720668 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				613F721E24AFCC8400720668 /* LocalAuthentication.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		613F71F824AFCBD600720668 = {
+			isa = PBXGroup;
+			children = (
+				613F720324AFCBD600720668 /* BioAuth */,
+				613F720224AFCBD600720668 /* Products */,
+				613F721B24AFCC6300720668 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		613F720224AFCBD600720668 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				613F720124AFCBD600720668 /* BioAuth.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		613F720324AFCBD600720668 /* BioAuth */ = {
+			isa = PBXGroup;
+			children = (
+				613F720424AFCBD600720668 /* AppDelegate.swift */,
+				613F720624AFCBD600720668 /* SceneDelegate.swift */,
+				613F720824AFCBD600720668 /* ViewController.swift */,
+				613F720A24AFCBD600720668 /* Main.storyboard */,
+				613F721024AFCBD700720668 /* Assets.xcassets */,
+				613F721224AFCBD700720668 /* LaunchScreen.storyboard */,
+				613F721524AFCBD700720668 /* Info.plist */,
+				613F720D24AFCBD600720668 /* BioAuth.xcdatamodeld */,
+			);
+			path = BioAuth;
+			sourceTree = "<group>";
+		};
+		613F721B24AFCC6300720668 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				613F721C24AFCC6300720668 /* LocalAuthentication.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		613F720024AFCBD600720668 /* BioAuth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 613F721824AFCBD700720668 /* Build configuration list for PBXNativeTarget "BioAuth" */;
+			buildPhases = (
+				613F71FD24AFCBD600720668 /* Sources */,
+				613F71FE24AFCBD600720668 /* Frameworks */,
+				613F71FF24AFCBD600720668 /* Resources */,
+				613F722024AFCC8400720668 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BioAuth;
+			productName = BioAuth;
+			productReference = 613F720124AFCBD600720668 /* BioAuth.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		613F71F924AFCBD600720668 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = Studying;
+				TargetAttributes = {
+					613F720024AFCBD600720668 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 613F71FC24AFCBD600720668 /* Build configuration list for PBXProject "BioAuth" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 613F71F824AFCBD600720668;
+			productRefGroup = 613F720224AFCBD600720668 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				613F720024AFCBD600720668 /* BioAuth */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		613F71FF24AFCBD600720668 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				613F721424AFCBD700720668 /* LaunchScreen.storyboard in Resources */,
+				613F721124AFCBD700720668 /* Assets.xcassets in Resources */,
+				613F720C24AFCBD600720668 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		613F71FD24AFCBD600720668 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				613F720F24AFCBD600720668 /* BioAuth.xcdatamodeld in Sources */,
+				613F720924AFCBD600720668 /* ViewController.swift in Sources */,
+				613F720524AFCBD600720668 /* AppDelegate.swift in Sources */,
+				613F720724AFCBD600720668 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		613F720A24AFCBD600720668 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				613F720B24AFCBD600720668 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		613F721224AFCBD700720668 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				613F721324AFCBD700720668 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		613F721624AFCBD700720668 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		613F721724AFCBD700720668 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		613F721924AFCBD700720668 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BioAuth/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = homeStudy.BioAuth;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		613F721A24AFCBD700720668 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BioAuth/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = homeStudy.BioAuth;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		613F71FC24AFCBD600720668 /* Build configuration list for PBXProject "BioAuth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				613F721624AFCBD700720668 /* Debug */,
+				613F721724AFCBD700720668 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		613F721824AFCBD700720668 /* Build configuration list for PBXNativeTarget "BioAuth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				613F721924AFCBD700720668 /* Debug */,
+				613F721A24AFCBD700720668 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		613F720D24AFCBD600720668 /* BioAuth.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				613F720E24AFCBD600720668 /* BioAuth.xcdatamodel */,
+			);
+			currentVersion = 613F720E24AFCBD600720668 /* BioAuth.xcdatamodel */;
+			path = BioAuth.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 613F71F924AFCBD600720668 /* Project object */;
+}
