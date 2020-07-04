@@ -33,7 +33,7 @@
                                     <action selector="takeImageBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y0E-gQ-33K"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guess my Gender!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vjh-WT-Wcl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guess my Gender!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vjh-WT-Wcl">
                                 <rect key="frame" x="16" y="16" width="343" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="BZT-kk-IXg"/>
