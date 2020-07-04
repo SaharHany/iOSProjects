@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  GenderClassifier
+
+  Created by Sahar Hany on 7/4/20.
+  Copyright © 2020 Studying. All rights reserved.
+*/
+
+/*AnswerLabel text incase of showing answer.*/
+"AnswerLabel_Text_AnswerCase" = "أعتقد أنك ...";
+
+/*AnswerLabel text incase of reset view.*/
+"AnswerLabel_Text_ResetViewCase" = "يرجى ارفاق أو التقاط صورة شخص لتخمين نوعه!";
+
+/*error message*/
+"errorMessage" = "هناك مشكلة في تصنيف الصورة.";
+
+/*error message incase of nothing recognized*/
+"errorMessage_NothingRecognizedCase" = "لا شئ لوحظ.";
+
+/*Man*/
+"Man" = "رجل";
+
+/*Woman*/
+"Woman" = "امراة";
+
+/*MainHeader of App*/
+"MainHeader" = "خمن ما هو نوعي!";

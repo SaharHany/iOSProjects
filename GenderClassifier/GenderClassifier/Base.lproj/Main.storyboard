@@ -91,6 +91,7 @@
                     </view>
                     <connections>
                         <outlet property="answerLabel" destination="Wxa-7B-qi7" id="XtV-1w-C7T"/>
+                        <outlet property="appMainHeaderLabel" destination="vjh-WT-Wcl" id="v35-mJ-goc"/>
                         <outlet property="genderSegmentControl" destination="o5k-dY-eVs" id="tg1-ko-My9"/>
                         <outlet property="inputImageView" destination="17O-zi-6pI" id="mzh-Cq-Fcn"/>
                     </connections>

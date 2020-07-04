@@ -15,6 +15,7 @@
 		614855BF24AE317200D46B67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 614855BE24AE317200D46B67 /* Assets.xcassets */; };
 		614855C224AE317200D46B67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 614855C024AE317200D46B67 /* LaunchScreen.storyboard */; };
 		6156FF4424AE661700C16FBC /* GenderClassifierModel 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 6156FF4324AE661700C16FBC /* GenderClassifierModel 1.mlmodel */; };
+		616CE7FD24B10BD40097AE54 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 616CE7F924B10BD40097AE54 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,9 @@
 		614855C124AE317200D46B67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		614855C324AE317200D46B67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6156FF4324AE661700C16FBC /* GenderClassifierModel 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = "GenderClassifierModel 1.mlmodel"; path = "GenderClassifierModel.mlproj/Models/GenderClassifierModel 1.mlmodel"; sourceTree = "<group>"; };
+		616CE7FA24B10BD40097AE54 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		616CE7FB24B10BD40097AE54 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		616CE7FC24B10BD40097AE54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		614855B124AE317000D46B67 /* GenderClassifier */ = {
 			isa = PBXGroup;
 			children = (
+				616CE7F824B10BD40097AE54 /* Strings */,
 				614855B224AE317000D46B67 /* AppDelegate.swift */,
 				614855B424AE317000D46B67 /* SceneDelegate.swift */,
 				614855B624AE317000D46B67 /* ViewController.swift */,
@@ -71,6 +76,14 @@
 				614855BB24AE317000D46B67 /* GenderClassifier.xcdatamodeld */,
 			);
 			path = GenderClassifier;
+			sourceTree = "<group>";
+		};
+		616CE7F824B10BD40097AE54 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				616CE7F924B10BD40097AE54 /* Localizable.strings */,
+			);
+			path = Strings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -115,6 +128,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = 614855A624AE317000D46B67;
 			productRefGroup = 614855B024AE317000D46B67 /* Products */;
@@ -131,6 +145,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				616CE7FD24B10BD40097AE54 /* Localizable.strings in Resources */,
 				614855C224AE317200D46B67 /* LaunchScreen.storyboard in Resources */,
 				614855BF24AE317200D46B67 /* Assets.xcassets in Resources */,
 				614855BA24AE317000D46B67 /* Main.storyboard in Resources */,
@@ -169,6 +184,16 @@
 				614855C124AE317200D46B67 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		616CE7F924B10BD40097AE54 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				616CE7FA24B10BD40097AE54 /* ar */,
+				616CE7FB24B10BD40097AE54 /* en */,
+				616CE7FC24B10BD40097AE54 /* Base */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

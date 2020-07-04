@@ -24,6 +24,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet weak var inputImageView: UIImageView!
     
+    @IBOutlet weak var appMainHeaderLabel: UILabel!
+    
     var imagePicker = UIImagePickerController()
     
     //ML Model setup
@@ -44,7 +46,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view.\
+        self.genderSegmentControl.setTitle(NSLocalizedString("Man",          comment: "Man"), forSegmentAt: 0)
+        self.genderSegmentControl.setTitle(NSLocalizedString("Woman",        comment: "Woman"), forSegmentAt: 1)
+        self.appMainHeaderLabel.text =     NSLocalizedString("MainHeader",   comment: "MainHeader of App")
         resetView()
     }
 
@@ -88,7 +93,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func shouldShowAnswer(gender : Gender){
-        answerLabel.text              = "I think you're ..."
+        answerLabel.text              = NSLocalizedString("AnswerLabel_Text_AnswerCase", comment: "AnswerLabel text incase of showing answer.")
         genderSegmentControl.isHidden = false
         if gender == Gender.Woman {
             genderSegmentControl.selectedSegmentIndex = 1
@@ -104,7 +109,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func resetView(){
-        answerLabel.text              = "Please Import or Capture an image of a person to guess his gender!"
+        answerLabel.text              = NSLocalizedString("AnswerLabel_Text_ResetViewCase", comment: "AnswerLabel text incase of reset view.")
         inputImageView.isHidden       = true
         genderSegmentControl.isHidden = true
     }
@@ -115,7 +120,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func processClassifications(for request: VNRequest, error: Error?) {
         DispatchQueue.main.async {
             guard let results = request.results else {
-                self.shouldShowErrorMessage(error: "Unable to classify image.")
+                let errorMsg = NSLocalizedString("errorMessage", comment: "error message")
+                self.shouldShowErrorMessage(error: errorMsg)
                 print("Unable to classify image.\n\(error!.localizedDescription)")
                 return
             }
@@ -123,7 +129,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             let classifications = results as! [VNClassificationObservation]
         
             if classifications.isEmpty {
-                self.shouldShowErrorMessage(error: "Nothing recognized.")
+                let errorMsg = NSLocalizedString( "errorMessage_NothingRecognizedCase", comment: "error message incase of nothing recognized")
+                self.shouldShowErrorMessage(error: errorMsg)
             } else {
                 // Display top classifications ranked by confidence in the UI.
                 let topClassifications = classifications.prefix(2)

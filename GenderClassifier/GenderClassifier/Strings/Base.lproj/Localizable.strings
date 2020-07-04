@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  GenderClassifier
+
+  Created by Sahar Hany on 7/4/20.
+  Copyright © 2020 Studying. All rights reserved.
+*/
+
+
+/*AnswerLabel text incase of showing answer.*/
+"AnswerLabel_Text_AnswerCase" = "I think you're ...";
+
+/*AnswerLabel text incase of reset view.*/
+"AnswerLabel_Text_ResetViewCase" = "Please Import or Capture an image of a person to guess his gender!";
+/*error message*/
+"errorMessage" = "Unable to classify image.";
+
+/*error message incase of nothing recognized*/
+"errorMessage_NothingRecognizedCase" = "Nothing recognized.";
+/*Man*/
+"Man" = "Man";
+/*Woman*/
+"Woman" = "Woman";
+/*MainHeader of App*/
+"MainHeader" = "Guess my Gender!";
