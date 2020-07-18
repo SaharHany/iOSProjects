@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class Note: NSObject {
+class Note: NSObject, NSCoding{
     
     var title : String
     var body  : String
@@ -15,5 +15,20 @@ class Note: NSObject {
     init(title : String , body : String) {
         self.title = title
         self.body  = body
+    }
+    
+    override convenience init() {
+           self.init(title: "",body: "")
+       }
+    
+    required convenience init?(coder : NSCoder) {
+        let title = coder.decodeObject(forKey: "title") as! String
+        let body  = coder.decodeObject(forKey: "body" ) as! String
+        self.init(title: title,body: body)
+    }
+    
+    func encode(with coder: NSCoder) {
+        coder.encode(title, forKey: "title")
+        coder.encode(body, forKey: "body")
     }
 }

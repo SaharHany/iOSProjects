@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		610D706A24C3564F00FFC0F8 /* DatabaseConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610D706924C3564F00FFC0F8 /* DatabaseConfiguration.swift */; };
+		610D706C24C36A3400FFC0F8 /* FileManagerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610D706B24C36A3400FFC0F8 /* FileManagerConfiguration.swift */; };
 		613BE4BC24C30B3A00CFB075 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613BE4BB24C30B3A00CFB075 /* AppDelegate.swift */; };
 		613BE4BE24C30B3A00CFB075 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613BE4BD24C30B3A00CFB075 /* SceneDelegate.swift */; };
 		613BE4C024C30B3A00CFB075 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613BE4BF24C30B3A00CFB075 /* HomeViewController.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		610D706924C3564F00FFC0F8 /* DatabaseConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseConfiguration.swift; sourceTree = "<group>"; };
+		610D706B24C36A3400FFC0F8 /* FileManagerConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerConfiguration.swift; sourceTree = "<group>"; };
 		613BE4B824C30B3A00CFB075 /* Mofakerty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mofakerty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		613BE4BB24C30B3A00CFB075 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		613BE4BD24C30B3A00CFB075 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				613BE4E024C3114F00CFB075 /* Note.swift */,
+				610D706924C3564F00FFC0F8 /* DatabaseConfiguration.swift */,
+				610D706B24C36A3400FFC0F8 /* FileManagerConfiguration.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -229,8 +235,10 @@
 				613BE4C624C30B3A00CFB075 /* Mofakerty.xcdatamodeld in Sources */,
 				613BE4C024C30B3A00CFB075 /* HomeViewController.swift in Sources */,
 				613BE4BC24C30B3A00CFB075 /* AppDelegate.swift in Sources */,
+				610D706A24C3564F00FFC0F8 /* DatabaseConfiguration.swift in Sources */,
 				613BE4E324C315F300CFB075 /* NoteAddingAndEditingViewController.swift in Sources */,
 				613BE4BE24C30B3A00CFB075 /* SceneDelegate.swift in Sources */,
+				610D706C24C36A3400FFC0F8 /* FileManagerConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
