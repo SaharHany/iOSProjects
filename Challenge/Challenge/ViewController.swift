@@ -27,8 +27,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func myButtondidPressed(_ sender: Any) {
         helloLabel.text = "Hello \(firstNameTF.text!) \(lastNameTF.text!) !"
-        firstNameTF.resignFirstResponder()
-        lastNameTF.resignFirstResponder()
+//        firstNameTF.resignFirstResponder()
+//        lastNameTF.resignFirstResponder()
+        view.endEditing(true)
+
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
