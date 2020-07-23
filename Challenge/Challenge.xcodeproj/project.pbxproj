@@ -15,6 +15,11 @@
 		61412D5D24C8F768001C423B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61412D5C24C8F768001C423B /* Assets.xcassets */; };
 		61412D6024C8F768001C423B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61412D5E24C8F768001C423B /* LaunchScreen.storyboard */; };
 		61412D6B24C8F769001C423B /* ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61412D6A24C8F769001C423B /* ChallengeTests.swift */; };
+		61412DA724C91C07001C423B /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61412DA624C91C07001C423B /* ChallengeViewController.swift */; };
+		61412DA924C9B1C4001C423B /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61412DA824C9B1C4001C423B /* TableViewController.swift */; };
+		61412DAB24C9B1E0001C423B /* ViewControllerWithTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61412DAA24C9B1E0001C423B /* ViewControllerWithTableView.swift */; };
+		61412DAE24C9B930001C423B /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61412DAC24C9B930001C423B /* CustomTableViewCell.swift */; };
+		61412DAF24C9B930001C423B /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61412DAD24C9B930001C423B /* CustomTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,11 @@
 		61412D6624C8F768001C423B /* ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		61412D6A24C8F769001C423B /* ChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeTests.swift; sourceTree = "<group>"; };
 		61412D6C24C8F769001C423B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61412DA624C91C07001C423B /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
+		61412DA824C9B1C4001C423B /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		61412DAA24C9B1E0001C423B /* ViewControllerWithTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerWithTableView.swift; sourceTree = "<group>"; };
+		61412DAC24C9B930001C423B /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		61412DAD24C9B930001C423B /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +99,11 @@
 				61412D5E24C8F768001C423B /* LaunchScreen.storyboard */,
 				61412D6124C8F768001C423B /* Info.plist */,
 				61412D5924C8F766001C423B /* Challenge.xcdatamodeld */,
+				61412DA624C91C07001C423B /* ChallengeViewController.swift */,
+				61412DA824C9B1C4001C423B /* TableViewController.swift */,
+				61412DAA24C9B1E0001C423B /* ViewControllerWithTableView.swift */,
+				61412DAC24C9B930001C423B /* CustomTableViewCell.swift */,
+				61412DAD24C9B930001C423B /* CustomTableViewCell.xib */,
 			);
 			path = Challenge;
 			sourceTree = "<group>";
@@ -185,6 +200,7 @@
 			files = (
 				61412D6024C8F768001C423B /* LaunchScreen.storyboard in Resources */,
 				61412D5D24C8F768001C423B /* Assets.xcassets in Resources */,
+				61412DAF24C9B930001C423B /* CustomTableViewCell.xib in Resources */,
 				61412D5824C8F766001C423B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,9 +220,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				61412D5524C8F766001C423B /* ViewController.swift in Sources */,
+				61412DA924C9B1C4001C423B /* TableViewController.swift in Sources */,
+				61412DAE24C9B930001C423B /* CustomTableViewCell.swift in Sources */,
+				61412DA724C91C07001C423B /* ChallengeViewController.swift in Sources */,
 				61412D5B24C8F766001C423B /* Challenge.xcdatamodeld in Sources */,
 				61412D5124C8F766001C423B /* AppDelegate.swift in Sources */,
 				61412D5324C8F766001C423B /* SceneDelegate.swift in Sources */,
+				61412DAB24C9B1E0001C423B /* ViewControllerWithTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
