@@ -17,12 +17,28 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var lastNameTF: UITextField!
     
+    @IBOutlet weak var myBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         firstNameTF.delegate = self
         lastNameTF.delegate  = self
         firstNameTF.becomeFirstResponder()
+        let label   = UILabel()
+//        label.frame = CGRect(x: 100, y: 350, width: 200, height: 100)
+        label.text  = "Hello from the code!"
+        label.textColor = UIColor.red
+        view.addSubview(label)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.topAnchor.constraint(equalTo: myBtn.bottomAnchor, constant: 10).isActive = true
+//        label.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16).isActive = true
+//        label.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 16).isActive = true
+        label.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        label.widthAnchor.constraint(equalToConstant: 300).isActive = true
+        label.textAlignment = NSTextAlignment.center
+        label.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor).isActive = true
+        
     }
 
     @IBAction func myButtondidPressed(_ sender: Any) {
