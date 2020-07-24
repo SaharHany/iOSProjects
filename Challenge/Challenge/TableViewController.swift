@@ -8,13 +8,18 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class TableViewController: UITableViewController ,ParentProtocol{
 
-    var dataSource : [String]?
+    var dataSource        : [String]?
+    var firstNameList     : [String]?
+    var lastNameList      : [String]?
+    var selectedIndexPath : IndexPath?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        dataSource = loadData()
+        loadData()
+        selectedIndexPath = nil
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -23,9 +28,14 @@ class TableViewController: UITableViewController {
     }
 
     
-    func loadData() -> [String]?{
-        return ["One", "Two" , "Three"]
+    func loadData(){
+        dataSource    =  ["One", "Two", "Three"]
+        firstNameList =  ["Sahar", "Aya", "Ghadeer"]
+        lastNameList  =  ["Hany", "Hamdy", "Ashraf"]
+
     }
+    
+    
     
     // MARK: - Table view data source
 
@@ -44,14 +54,26 @@ class TableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
+        
         cell.textLabel?.text = dataSource?[indexPath.row] ?? "\(indexPath.row)"
+
+        if (selectedIndexPath != nil) && (selectedIndexPath?.row == indexPath.row){
+            cell.backgroundColor       = UIColor.white
+            cell.textLabel?.textColor  = UIColor.purple
+            selectedIndexPath = nil
+        }else{
+            cell.backgroundColor       = UIColor.purple
+            cell.textLabel?.textColor  = UIColor.white
+        }
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-          let alert = UIAlertController.init(title: "Numbers App", message: dataSource?[indexPath.row] ?? "\(indexPath.row)", preferredStyle: .alert)
-          alert.addAction(UIAlertAction.init(title: "OK", style: .cancel, handler: nil))
-          present(alert, animated: true, completion: nil)
+//          let alert = UIAlertController.init(title: "Numbers App", message: dataSource?[indexPath.row] ?? "\(indexPath.row)", preferredStyle: .alert)
+//          alert.addAction(UIAlertAction.init(title: "OK", style: .cancel, handler: nil))
+//          present(alert, animated: true, completion: nil)
+        selectedIndexPath = indexPath
+        performSegue(withIdentifier: "showDetails", sender: nil)
     }
 
     /*
@@ -89,17 +111,23 @@ class TableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if var destinationVC = segue.destination as? ChildProtocol {
+            destinationVC.vc  = self
+            destinationVC.setData(firstName: firstNameList![selectedIndexPath!.row], lastName: lastNameList![selectedIndexPath!.row])
+        }
     }
-    */
-
-    override func performSegue(withIdentifier identifier: String, sender: Any?) {
-        
+    
+    func highlightCellAtIndexPath(){
+        if selectedIndexPath != nil {
+            tableView.reloadData()
+        }
     }
+    
 }

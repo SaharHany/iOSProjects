@@ -20,6 +20,7 @@
 		61412DAB24C9B1E0001C423B /* ViewControllerWithTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61412DAA24C9B1E0001C423B /* ViewControllerWithTableView.swift */; };
 		61412DAE24C9B930001C423B /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61412DAC24C9B930001C423B /* CustomTableViewCell.swift */; };
 		61412DAF24C9B930001C423B /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61412DAD24C9B930001C423B /* CustomTableViewCell.xib */; };
+		61412DB124CB1BC5001C423B /* ParentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61412DB024CB1BC5001C423B /* ParentProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		61412DAA24C9B1E0001C423B /* ViewControllerWithTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerWithTableView.swift; sourceTree = "<group>"; };
 		61412DAC24C9B930001C423B /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		61412DAD24C9B930001C423B /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		61412DB024CB1BC5001C423B /* ParentProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				61412DAA24C9B1E0001C423B /* ViewControllerWithTableView.swift */,
 				61412DAC24C9B930001C423B /* CustomTableViewCell.swift */,
 				61412DAD24C9B930001C423B /* CustomTableViewCell.xib */,
+				61412DB024CB1BC5001C423B /* ParentProtocol.swift */,
 			);
 			path = Challenge;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				61412D5524C8F766001C423B /* ViewController.swift in Sources */,
 				61412DA924C9B1C4001C423B /* TableViewController.swift in Sources */,
 				61412DAE24C9B930001C423B /* CustomTableViewCell.swift in Sources */,
+				61412DB124CB1BC5001C423B /* ParentProtocol.swift in Sources */,
 				61412DA724C91C07001C423B /* ChallengeViewController.swift in Sources */,
 				61412D5B24C8F766001C423B /* Challenge.xcdatamodeld in Sources */,
 				61412D5124C8F766001C423B /* AppDelegate.swift in Sources */,

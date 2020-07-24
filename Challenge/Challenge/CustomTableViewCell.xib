@@ -33,6 +33,7 @@
                         </connections>
                     </button>
                 </subviews>
+                <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstItem="sOW-HJ-Tte" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="1gJ-lx-lNP"/>
                     <constraint firstItem="e4b-Ly-FjI" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="FPg-UY-cGU"/>

@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        print("App didFinishLaunchingWithOptions")
         return true
     }
 
@@ -78,5 +79,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        print("App did become active")
+    }
+    
+    func applicationWillResignActive(_ application: UIApplication) {
+        print("App will resign active")
+    }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        print("App didEnter Background")
+    }
+    
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        print("App will enter foreground")
+    }
+
+    func applicationWillTerminate(_ application: UIApplication) {
+        print("App will terminate")
+    }
 }
 

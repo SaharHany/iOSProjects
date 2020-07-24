@@ -7,42 +7,52 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Profile-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Challenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Profile" id="BYZ-38-t0r" customClass="ViewController" customModule="Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D9I-eK-aQI">
-                                <rect key="frame" x="12" y="125" width="351" height="49"/>
+                                <rect key="frame" x="12" y="107" width="351" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="Qww-PT-iXg"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                                <color key="textColor" red="0.39370519826081118" green="0.0" blue="0.63337530217566473" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lWa-K2-MFP">
-                                <rect key="frame" x="12" y="206" width="351" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <rect key="frame" x="12" y="188" width="351" height="36"/>
+                                <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.60793022259999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.4392156862745098" green="0.31372549019607843" blue="0.62352941176470589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your Last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bBi-nT-tSZ">
-                                <rect key="frame" x="12" y="290" width="351" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <rect key="frame" x="12" y="274" width="351" height="36"/>
+                                <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.60793022259999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.4392156862745098" green="0.31372549019607843" blue="0.62352941176470589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P79-uP-jTc">
-                                <rect key="frame" x="12" y="415" width="351" height="30"/>
-                                <state key="normal" title="My Button"/>
+                                <rect key="frame" x="12" y="401" width="351" height="48"/>
+                                <color key="backgroundColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <state key="normal" title="My Button">
+                                    <color key="titleColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="myButtondidPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d0b-lq-rvs"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.60793022259999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="bBi-nT-tSZ" firstAttribute="top" secondItem="lWa-K2-MFP" secondAttribute="bottom" constant="50" id="05w-1n-30P"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="P79-uP-jTc" secondAttribute="trailing" constant="12" id="3ZX-dl-b5e"/>
@@ -66,7 +76,7 @@
                             <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="Lw3-NP-KwH"/>
+                    <navigationItem key="navigationItem" title="Profile" prompt="my app" largeTitleDisplayMode="never" id="Lw3-NP-KwH"/>
                     <connections>
                         <outlet property="firstNameTF" destination="lWa-K2-MFP" id="Goa-7X-EGP"/>
                         <outlet property="helloLabel" destination="D9I-eK-aQI" id="j8S-KH-e1W"/>
@@ -174,10 +184,10 @@
             </objects>
             <point key="canvasLocation" x="3054" y="115"/>
         </scene>
-        <!--Numbers-->
+        <!--Home-->
         <scene sceneID="rfu-8M-Wyc">
             <objects>
-                <tableViewController id="xMp-K8-bQc" customClass="TableViewController" customModule="Challenge" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Home" id="xMp-K8-bQc" customClass="TableViewController" customModule="Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zRR-14-6BY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -198,8 +208,8 @@
                             <outlet property="delegate" destination="xMp-K8-bQc" id="VRk-QC-BVy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Numbers" prompt="My app" largeTitleDisplayMode="always" id="B8z-Nj-IsW">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="hqH-9u-7WM"/>
+                    <navigationItem key="navigationItem" title="Home" prompt="My app" largeTitleDisplayMode="always" id="B8z-Nj-IsW">
+                        <barButtonItem key="backBarButtonItem" title="Home" id="hqH-9u-7WM"/>
                     </navigationItem>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="showDetails" id="uP5-we-iR0"/>

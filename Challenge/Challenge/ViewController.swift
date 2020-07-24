@@ -8,8 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
-
+class ViewController: UIViewController, UITextFieldDelegate , ChildProtocol{
+    
+    var vc: ParentProtocol?
     
     @IBOutlet weak var helloLabel: UILabel!
     
@@ -18,6 +19,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var lastNameTF: UITextField!
     
     @IBOutlet weak var myBtn: UIButton!
+    
+    var firstName : String?
+    var lastName  : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +32,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let label   = UILabel()
 //        label.frame = CGRect(x: 100, y: 350, width: 200, height: 100)
         label.text  = "Hello from the code!"
-        label.textColor = UIColor.red
+        label.textColor = UIColor.white
         view.addSubview(label)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.topAnchor.constraint(equalTo: myBtn.bottomAnchor, constant: 10).isActive = true
@@ -39,6 +43,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         label.textAlignment = NSTextAlignment.center
         label.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor).isActive = true
         
+        setFields()
+        myBtn.setTitle( "Say Hello", for: .normal)
+
     }
 
     @IBAction func myButtondidPressed(_ sender: Any) {
@@ -57,5 +64,26 @@ class ViewController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         return false
     }
+    
+    func setFields(){
+        if firstName != nil {
+            firstNameTF.text = firstName
+        }
+        if lastName != nil {
+            lastNameTF.text = lastName
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        if vc != nil{
+            vc?.highlightCellAtIndexPath()
+        }
+    }
+
+    func setData(firstName: String, lastName: String) {
+        self.firstName = firstName
+        self.lastName  = lastName
+    }
+    
 }
 
