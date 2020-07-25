@@ -125,7 +125,7 @@ class TableViewController: UITableViewController ,ParentProtocol{
     }
     
     /**
-        Method to highlight selected cell
+        Method to highlight selected cell.
      */
     func highlightCellAtIndexPath(){
         if selectedIndexPath != nil {
@@ -133,4 +133,13 @@ class TableViewController: UITableViewController ,ParentProtocol{
         }
     }
     
+    /**
+     Method to add two numbers and return the sum.
+     - parameter  firstOperand  : first Number
+     - parameter secondOperand : second Number to be added to the first one
+     - returns: the sum of firstOperand and secondOperand
+     */
+    func sum(firstOperand : Int, secondOperand : Int) -> Int{
+        return firstOperand + secondOperand
+    }
 }
