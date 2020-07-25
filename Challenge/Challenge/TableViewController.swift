@@ -124,6 +124,9 @@ class TableViewController: UITableViewController ,ParentProtocol{
         }
     }
     
+    /**
+        Method to highlight selected cell
+     */
     func highlightCellAtIndexPath(){
         if selectedIndexPath != nil {
             tableView.reloadData()
