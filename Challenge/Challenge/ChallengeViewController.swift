@@ -47,6 +47,13 @@ class ChallengeViewController: UIViewController , UITextFieldDelegate {
         firstNameLabel.translatesAutoresizingMaskIntoConstraints = false
         textField.translatesAutoresizingMaskIntoConstraints = false
 
+        //create btn with code
+        let btn = UIButton(type: .system)
+        btn.setTitle("Button from code ", for: .normal)
+        btn.frame = CGRect(x: 100, y:300, width: 200, height: 60)
+//        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.addTarget(self, action: #selector(btnDidPressed), for: .touchUpInside)
+        view.addSubview(btn)
         
     }
     
@@ -64,5 +71,9 @@ class ChallengeViewController: UIViewController , UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return false
+    }
+    
+    @objc func btnDidPressed(){
+        print("btn is pressed")
     }
 }

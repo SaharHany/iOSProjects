@@ -21,6 +21,11 @@
 		61412DAE24C9B930001C423B /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61412DAC24C9B930001C423B /* CustomTableViewCell.swift */; };
 		61412DAF24C9B930001C423B /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61412DAD24C9B930001C423B /* CustomTableViewCell.xib */; };
 		61412DB124CB1BC5001C423B /* ParentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61412DB024CB1BC5001C423B /* ParentProtocol.swift */; };
+		61412DE824CB544D001C423B /* SliderAndProgressBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61412DE724CB544D001C423B /* SliderAndProgressBarViewController.swift */; };
+		61412DEA24CB784B001C423B /* BuiltinBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61412DE924CB784B001C423B /* BuiltinBrowserViewController.swift */; };
+		61412DEC24CB9393001C423B /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61412DEB24CB9393001C423B /* CollectionViewController.swift */; };
+		61412DEE24CB9406001C423B /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61412DED24CB9406001C423B /* CustomCollectionViewCell.swift */; };
+		61412DF024CC9B0F001C423B /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61412DEF24CC9B0F001C423B /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +57,11 @@
 		61412DAC24C9B930001C423B /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		61412DAD24C9B930001C423B /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		61412DB024CB1BC5001C423B /* ParentProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentProtocol.swift; sourceTree = "<group>"; };
+		61412DE724CB544D001C423B /* SliderAndProgressBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderAndProgressBarViewController.swift; sourceTree = "<group>"; };
+		61412DE924CB784B001C423B /* BuiltinBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuiltinBrowserViewController.swift; sourceTree = "<group>"; };
+		61412DEB24CB9393001C423B /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		61412DED24CB9406001C423B /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		61412DEF24CC9B0F001C423B /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +117,11 @@
 				61412DAC24C9B930001C423B /* CustomTableViewCell.swift */,
 				61412DAD24C9B930001C423B /* CustomTableViewCell.xib */,
 				61412DB024CB1BC5001C423B /* ParentProtocol.swift */,
+				61412DE724CB544D001C423B /* SliderAndProgressBarViewController.swift */,
+				61412DE924CB784B001C423B /* BuiltinBrowserViewController.swift */,
+				61412DEB24CB9393001C423B /* CollectionViewController.swift */,
+				61412DED24CB9406001C423B /* CustomCollectionViewCell.swift */,
+				61412DEF24CC9B0F001C423B /* TabBarViewController.swift */,
 			);
 			path = Challenge;
 			sourceTree = "<group>";
@@ -222,10 +237,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61412DEC24CB9393001C423B /* CollectionViewController.swift in Sources */,
 				61412D5524C8F766001C423B /* ViewController.swift in Sources */,
 				61412DA924C9B1C4001C423B /* TableViewController.swift in Sources */,
+				61412DEE24CB9406001C423B /* CustomCollectionViewCell.swift in Sources */,
+				61412DF024CC9B0F001C423B /* TabBarViewController.swift in Sources */,
+				61412DE824CB544D001C423B /* SliderAndProgressBarViewController.swift in Sources */,
 				61412DAE24C9B930001C423B /* CustomTableViewCell.swift in Sources */,
 				61412DB124CB1BC5001C423B /* ParentProtocol.swift in Sources */,
+				61412DEA24CB784B001C423B /* BuiltinBrowserViewController.swift in Sources */,
 				61412DA724C91C07001C423B /* ChallengeViewController.swift in Sources */,
 				61412D5B24C8F766001C423B /* Challenge.xcdatamodeld in Sources */,
 				61412D5124C8F766001C423B /* AppDelegate.swift in Sources */,

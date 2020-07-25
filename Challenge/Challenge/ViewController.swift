@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SafariServices
 
-class ViewController: UIViewController, UITextFieldDelegate , ChildProtocol{
+class ViewController: UIViewController, UITextFieldDelegate , ChildProtocol , SFSafariViewControllerDelegate{
     
     var vc: ParentProtocol?
     
@@ -49,10 +50,28 @@ class ViewController: UIViewController, UITextFieldDelegate , ChildProtocol{
     }
 
     @IBAction func myButtondidPressed(_ sender: Any) {
-        helloLabel.text = "Hello \(firstNameTF.text!) \(lastNameTF.text!) !"
+        let msg = "Hello \(firstNameTF.text!) \(lastNameTF.text!) !"
+//        helloLabel.text = msg
 //        firstNameTF.resignFirstResponder()
 //        lastNameTF.resignFirstResponder()
         view.endEditing(true)
+        let alert = UIAlertController.init(title: "Hello!", message: msg, preferredStyle: .alert)
+        
+        let action_Cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: { action in
+            self.helloLabel.text = msg
+            UIApplication.shared.open(URL(string: "http://google.com")!, options: [:], completionHandler: nil)
+        })
+        alert.addAction(action_Cancel)
+        
+        let action_Share = UIAlertAction(title: "Share", style: .default, handler: { action in
+            let activityView = UIActivityViewController(activityItems: [msg], applicationActivities: nil)
+            self.present(activityView, animated: true, completion: {
+                self.helloLabel.text = msg
+            })
+        })
+        alert.addAction(action_Share)
+        
+        present(alert, animated: true, completion: nil)
 
     }
     
@@ -85,5 +104,17 @@ class ViewController: UIViewController, UITextFieldDelegate , ChildProtocol{
         self.lastName  = lastName
     }
     
+    
+    @IBAction func openGoogleBtnDidPressed(_ sender: UIButton) {
+        if let url = URL(string: "http://google.com"){
+            let safariVC = SFSafariViewController(url: url)
+            safariVC.delegate = self
+            present(safariVC, animated: true, completion: nil)
+        }
+    }
+    
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        helloLabel.text = "Welcome back! \(firstName!) \(lastName!)"
+    }
 }
 
