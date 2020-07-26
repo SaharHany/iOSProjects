@@ -13,11 +13,16 @@ class ViewControllerWithTableView: UIViewController, UITableViewDelegate, UITabl
     
     @IBOutlet weak var myTableView: UITableView!
     var dataSource : [String]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         dataSource = loadData()
+        setupTableView()
+    }
+    
+     func setupTableView() {
         myTableView.delegate   = self
         myTableView.dataSource = self
         myTableView.register(CustomTableViewCell.self, forCellReuseIdentifier: "CustomCellIdentifier")
